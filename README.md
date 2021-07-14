@@ -28,6 +28,8 @@ Catálogo de produtos;
 - Modal de obrigado ao finalizar compra
 - Geolocalização do cliente por IP
 
+![https://i.imgur.com/oMRy8Is.jpg](https://i.imgur.com/oMRy8Is.jpg)
+
 E deixe sua imaginação fluir. Faça o quiser para nos impressionar e demonstrar seus conhecimentos. 
 Se te ajudar, deixamos algumas idéias pra você :)
 
