@@ -1,34 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Suprevida: Desafio NextJS
+Parabéns por ter passado de fase e chegado no teste :)
 
-## Getting Started
+Estamos empenhados em encontrar pessoas que façam parte do nosso time de tecnologia e acreditamos que você tem as características que buscamos.
+Para isso, elaboramos um desafio para você e como somos um ecommerce, nada melhor do que o tema ser exatamente esse.
 
-First, run the development server:
+Insumos:
+https://pokeapi.co
+https://ip-api.com
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Instruções:
+- Faça um fork do projeto.
+- Mande um Pull Request com o que desenvolveu com seu nome completo no nome do PR.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Queremos saber  como você montaria uma loja para um (1) tipo de Pokémon. Escolha o seu preferido.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Os Pokémons deverão ser mostrado através da API listada acima. Após a requisição, os preços devem ser definidos mockados ou randomicamente(⭐).
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.tsx`.
+Pensamos em funcionalidades que julgamos essenciais para essa loja.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Catálogo de produtos;
 
-## Learn More
+- Carrinho lateral
+- Resumo do carrinho
+- 1 loja com Pokémon de um único tipo
+- Barra de busca para filtrar os Pokémon
+- Botão de finalizar compra, reiniciando o processo de compra
+- Modal de obrigado ao finalizar compra
+- Geolocalização do cliente por IP
 
-To learn more about Next.js, take a look at the following resources:
+![https://i.imgur.com/oMRy8Is.jpg](https://i.imgur.com/oMRy8Is.jpg)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+E deixe sua imaginação fluir. Faça o quiser para nos impressionar e demonstrar seus conhecimentos. 
+Se te ajudar, deixamos algumas idéias pra você :)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Layout responsivo
+- Salvar dados locamente para não perder o carrinho no refresh da página
+- Deploy na Vercel por exemplo
 
-## Deploy on Vercel
+Estamos ansiosos pra ver o resultado. Boa sorte!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
