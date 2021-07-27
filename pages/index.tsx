@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import IpApi from './api/ipapi';
-import PokeApi from './api/pokeapi'
+import PokeApi from './api/pokeapi';
+import Navbar from './components/Navbar/Navbar'
+
 
 
 export default function Home() {
@@ -15,6 +17,7 @@ export default function Home() {
   return (
     <div>
       Hello World
+      <Navbar />
       {/* {getRegion} */}
       {loading && <h1>Loading...</h1>}
       {filter?.map(pokedex => (<h1>{pokedex?.pokemon?.name}</h1>))}
