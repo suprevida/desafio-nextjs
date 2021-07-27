@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useState } from 'react';
 import IpApi from './api/ipapi';
 import PokeApi from './api/pokeapi';
-import { Card } from './components/Cards/Card';
+import Card from './components/Cards/Card';
 import Navbar from './components/Navbar/Navbar'
 
 
@@ -11,8 +11,6 @@ import Navbar from './components/Navbar/Navbar'
 export default function Home() {
   const { data , loading } =  PokeApi();
   const filter = data?.pokemon;
-
-  
 
 
   return (

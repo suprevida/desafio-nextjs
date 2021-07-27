@@ -9,7 +9,7 @@ type Settings= {
   price: string
 }
 
-export const Card = ({name, imgUrl, price}: Settings) => {
+const Card = ({name, imgUrl, price}: Settings) => {
   const [ bgImg, setBgimg] = useState('')
   const [ description, setDescription] = useState('');
 
@@ -42,3 +42,4 @@ export const Card = ({name, imgUrl, price}: Settings) => {
     )
 }
 
+export default Card;
