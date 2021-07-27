@@ -1,27 +1,26 @@
-import { useState, useEffect } from "react";
+import { Typography } from "@material-ui/core";
+import { GetServerSideProps } from "next";
 import Card from "../components/Card";
 import PageWrapper from "../components/PageWrapper";
 import { ResumePokemon } from "../models/Pokemon";
 import PokeAPIService from "../services/PokeAPI";
 import * as S from "./_styles";
 
-export default function Home() {
-  const [pokemons, setPokemons] = useState<
-    { slot: number; pokemon: ResumePokemon }[]
-  >([]);
+interface HomeProps {
+  pokemons: { slot: number; pokemon: ResumePokemon }[];
+  status: number;
+}
 
-  useEffect(() => {
-    const getPokemons = async () => {
-      try {
-        const { data } = await PokeAPIService.getPokemonsFireType();
-        setPokemons(data.pokemon);
-      } catch (error) {
-        console.log(error);
-      }
-    };
+export default function Home({ pokemons, status }: HomeProps) {
+  console.log(pokemons)
 
-    getPokemons();
-  }, []);
+  if (status !== 200) {
+    return (
+      <PageWrapper>
+        <Typography>Ash, we have a problem</Typography>
+      </PageWrapper>
+    );
+  }
 
   return (
     <PageWrapper>
@@ -33,3 +32,33 @@ export default function Home() {
     </PageWrapper>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  try {
+    const res = await PokeAPIService.getPokemonsFireType();
+
+    const { data, status } = res;
+
+    const pokemonsWithPrice: { slot: number; pokemon: ResumePokemon }[] =
+      data.pokemon.map((poke) => ({
+        ...poke,
+        pokemon: { ...poke.pokemon, price: (Math.random() * 1100).toFixed(2) },
+      }));
+
+    console.log(pokemonsWithPrice[0])
+
+    return {
+      props: {
+        pokemons: pokemonsWithPrice,
+        status,
+      },
+    };
+  } catch (error) {
+    return {
+      props: {
+        pokemons: [],
+        status: error.response.status,
+      },
+    };
+  }
+};
