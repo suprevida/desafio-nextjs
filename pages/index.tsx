@@ -41,7 +41,7 @@ export default function Home() {
           </div>
                 <div className="col-9 d-flex flex-wrap justify-content-between gap-1">
             {filter?.map(pokedex => (
-              <div className="col-2 mb-2">
+              <div className="col-2 mb-2" key={pokedex?.pokemon?.name}>
                     <Card name={pokedex?.pokemon?.name}
                     type={pokedex?.pokemon?.url}
                     imgUrl={pokedex?.pokemon?.url}
