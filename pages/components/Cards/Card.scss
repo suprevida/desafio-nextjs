@@ -36,7 +36,7 @@ a {
     z-index: 999;
 
     h3 {
-      color: White;
+      color: Black;
       font-size: 20px;
       font-weight: 700;
       text-transform: uppercase;
@@ -44,8 +44,8 @@ a {
       ;
     }
     .rate {
+      color: rgba($color: #000, $alpha: 0.7);
       span {
-        color: rgba($color: #fff, $alpha: 0.7);
         background: rgba($color: #000, $alpha: 0.7);
         border-radius: 8px;
         padding: 0.2rem 1rem;
