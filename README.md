@@ -5,8 +5,8 @@ Estamos empenhados em encontrar pessoas que façam parte do nosso time de tecnol
 Para isso, elaboramos um desafio para você e como somos um ecommerce, nada melhor do que o tema ser exatamente esse.
 
 Insumos:
-https://pokeapi.co
-https://ip-api.com
+https://pokeapi.co/api/v2/type/15/
+http://ip-api.com/json/?query=&fields=status,country,regionName,query
 
 Instruções:
 - Faça um fork do projeto.
