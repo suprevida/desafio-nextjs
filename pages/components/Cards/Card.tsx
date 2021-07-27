@@ -32,7 +32,7 @@ export const Card = ({name, imgUrl, price}: Settings) => {
               {description}
               </div>
               <div className="text-uppercase pb-2">
-
+              R$ {price},00
               </div>
               <button type="button" className="btn btn-dark">Add to cart</button>
               </div>
