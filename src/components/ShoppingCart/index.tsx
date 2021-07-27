@@ -86,7 +86,7 @@ const ShoppingCart: React.FC = () => {
         keepMounted
         onClose={handleClose}
       >
-        <DialogTitle>Muito obrigado!</DialogTitle>
+        <DialogTitle>Muito obrigado! (:</DialogTitle>
         <DialogContent>
           <DialogContentText>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
