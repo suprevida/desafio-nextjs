@@ -6,6 +6,10 @@ export const Card = styled(Paper)`
   height: auto;
   margin-bottom: 16px;
   overflow: hidden;
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `;
 
 export const CardWrapper = styled.div`

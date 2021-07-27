@@ -1,12 +1,23 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Avatar, Grid, IconButton, TextField, Typography } from "@material-ui/core";
+import {
+  Avatar,
+  Badge,
+  Grid,
+  IconButton,
+  TextField,
+  Typography,
+} from "@material-ui/core";
 import * as S from "./styles";
 import IPAPIService from "../../services/IPAPI";
-import LocalGroceryStoreIcon from '@material-ui/icons/LocalGroceryStore';
+import LocalGroceryStoreIcon from "@material-ui/icons/LocalGroceryStore";
+import { useSearchField } from "../../context/SearchInput/Context";
+import { useShoppingCart } from "../../context/ShoppingCart/Context";
 
 const Menu: React.FC = () => {
+  const { searchField, setSearchField } = useSearchField();
+  const { quantityInCart, toggleOpen } = useShoppingCart();
   const [location, setLocation] = useState<string>("");
 
   useEffect(() => {
@@ -41,6 +52,8 @@ const Menu: React.FC = () => {
                 variant="outlined"
                 color="secondary"
                 fullWidth
+                value={searchField}
+                onChange={(e) => setSearchField(e.target.value)}
                 InputProps={{ type: "search" }}
               />
             </Grid>
@@ -63,9 +76,11 @@ const Menu: React.FC = () => {
             alignItems="center"
             justifyContent="flex-end"
           >
-            <IconButton>
-              <LocalGroceryStoreIcon />
-            </IconButton>
+            <Badge badgeContent={quantityInCart} color="secondary">
+              <IconButton onClick={toggleOpen}>
+                <LocalGroceryStoreIcon />
+              </IconButton>
+            </Badge>
           </Grid>
           <Grid
             item

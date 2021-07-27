@@ -5,6 +5,8 @@ import * as S from "./styles";
 import { Skeleton } from "@material-ui/lab";
 import Image from "next/image";
 import { Button, Typography } from "@material-ui/core";
+import { useShoppingCart } from "../../context/ShoppingCart/Context";
+import { formatPrice } from "../../utils";
 
 interface CardProps {
   pokemon: ResumePokemon;
@@ -13,6 +15,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ pokemon }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [pokemonDetails, setPokemonDetails] = useState<Pokemon>();
+  const { addPokemonInCart } = useShoppingCart();
 
   /*
     Infelizmente o get de pokemons por tipo, pega somente o nome. O que me 
@@ -34,6 +37,17 @@ const Card: React.FC<CardProps> = ({ pokemon }) => {
     getPokemonDetails();
   }, [pokemon.name]);
 
+  const onClickBuyButton = () => {
+    if (!pokemonDetails) return;
+
+    addPokemonInCart({
+      id: pokemonDetails.id,
+      name: pokemonDetails.name,
+      image: pokemonDetails.sprites.front_default,
+      price: pokemon.price,
+    });
+  };
+
   return (
     <S.Card>
       {isLoading && pokemonDetails ? (
@@ -52,7 +66,9 @@ const Card: React.FC<CardProps> = ({ pokemon }) => {
           </S.PokemonImgWrapper>
           <S.CardTitleWrapper>
             <Typography>{pokemonDetails.name}</Typography>
-            <Typography>{`R$ ${pokemon.price && pokemon.price.replace('.', ',')}`}</Typography>
+            <Typography>{`R$ ${
+              pokemon.price && formatPrice(pokemon.price)
+            }`}</Typography>
           </S.CardTitleWrapper>
           <div>
             <Typography variant="caption">
@@ -65,7 +81,9 @@ const Card: React.FC<CardProps> = ({ pokemon }) => {
             </Typography>
           </div>
 
-          <Button variant="contained">Comprar</Button>
+          <Button onClick={onClickBuyButton} variant="contained">
+            Comprar
+          </Button>
         </S.CardWrapper>
       ) : (
         <Skeleton variant="rect" width="100%" height="100%" />

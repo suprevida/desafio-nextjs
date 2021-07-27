@@ -4,6 +4,8 @@ import styled from 'styled-components'
 export const WrapperNav = styled(Paper)`
   width: 100%;
   padding: 0px 8px;
+  position: fixed;
+  z-index: 10;
 `;
 
 export const Nav = styled.nav`

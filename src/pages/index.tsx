@@ -1,7 +1,9 @@
 import { Typography } from "@material-ui/core";
 import { GetServerSideProps } from "next";
+import { useEffect, useState } from "react";
 import Card from "../components/Card";
 import PageWrapper from "../components/PageWrapper";
+import { useSearchField } from "../context/SearchInput/Context";
 import { ResumePokemon } from "../models/Pokemon";
 import PokeAPIService from "../services/PokeAPI";
 import * as S from "./_styles";
@@ -12,7 +14,18 @@ interface HomeProps {
 }
 
 export default function Home({ pokemons, status }: HomeProps) {
-  console.log(pokemons)
+  const { searchField } = useSearchField();
+  const [filteredPokemons, setFilteredPokemons] = useState<
+    { slot: number; pokemon: ResumePokemon }[]
+  >([]);
+
+  useEffect(() => {
+    const newFilteredPokemons = pokemons.filter(
+      ({ pokemon }) => pokemon.name.indexOf(searchField) > -1
+    );
+
+    setFilteredPokemons(newFilteredPokemons);
+  }, [searchField, pokemons]);
 
   if (status !== 200) {
     return (
@@ -25,14 +38,20 @@ export default function Home({ pokemons, status }: HomeProps) {
   return (
     <PageWrapper>
       <S.ListWrapper>
-        {pokemons.map((poke, i) => (
-          <Card key={`${poke.pokemon.name}-${i}`} pokemon={poke.pokemon} />
-        ))}
+        {(searchField.length > 0 ? filteredPokemons : pokemons).map(
+          (poke, i) => (
+            <Card key={`${poke.pokemon.name}-${i}`} pokemon={poke.pokemon} />
+          )
+        )}
       </S.ListWrapper>
     </PageWrapper>
   );
 }
 
+/*
+  Realizei essa abordagem para popular o front-end, pensando em priorizar o SEO.
+  Visto que estou fazendo um e-commerce.
+*/
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
     const res = await PokeAPIService.getPokemonsFireType();
@@ -44,8 +63,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
         ...poke,
         pokemon: { ...poke.pokemon, price: (Math.random() * 1100).toFixed(2) },
       }));
-
-    console.log(pokemonsWithPrice[0])
 
     return {
       props: {

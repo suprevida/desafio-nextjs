@@ -15,6 +15,13 @@ export interface ResumeType {
   url: string;
 }
 
+export interface CartPokemon {
+  id: number;
+  name: string;
+  image: string | null;
+  price: string;
+}
+
 export interface Pokemon {
   id: number;
   name: string;
