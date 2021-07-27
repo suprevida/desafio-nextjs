@@ -1,5 +1,6 @@
 module.exports = {
   reactStrictMode: true,
+  pageExtensions: ['tsx'],
   images: {
     domains: ['raw.githubusercontent.com'],
   },
