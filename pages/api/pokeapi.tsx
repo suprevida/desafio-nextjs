@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-export const POKE_API_URL = 'https://pokeapi.co/api/v2/type/1'
+export const POKE_API_URL = 'https://pokeapi.co/api/v2/type/3'
 
 const IpApi = () => {
   const [data, setData] = useState(null);
