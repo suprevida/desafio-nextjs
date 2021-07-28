@@ -14,11 +14,11 @@ export default function Home() {
 
 
   return (
-    <div>
-      <Navbar />
-      {loading && <h1>Loading...</h1>}
+    <>
       <div className="container">
-        <h1 className="my-5 text-uppercase text-bold row">Pokemons for sale!</h1>
+        {loading && <h1>Loading...</h1>}
+        <div className="row">
+        <h1 className="my-5 text-uppercase text-bold">Pokemons for sale!</h1>
         <div className="d-flex flex-row justify-content-between">
 
           <div className="col">
@@ -33,22 +33,24 @@ export default function Home() {
               <div className="purchase">
                 <h3>TOTAL</h3>
                 <p>R$xxxx,00</p>
-                <button>Purchase</button>
+                <button className="btn btn-success">Purchase</button>
               </div>
             </div>
           </div>
-                <div className="col-9 d-flex flex-wrap justify-content-between gap-1">
-            {filter?.map(pokedex => (
-              <div className="col-2 mb-2" key={pokedex?.pokemon?.name}>
-                    <Card name={pokedex?.pokemon?.name}
-                    type={pokedex?.pokemon?.url}
-                    imgUrl={pokedex?.pokemon?.url}
-                    price={`${pokedex?.pokemon?.name.length * 25}`}/>
-                    </div>
-            ))}
-              </div>
+            <div className="col-md-9 d-flex flex-wrap justify-content-between gap-1">
+                {filter?.map(pokedex => (
+                  <div className="col-md-2 mb-2" key={pokedex?.pokemon?.name}>
+                  <Card name={pokedex?.pokemon?.name}
+                  type={pokedex?.pokemon?.url}
+                  imgUrl={pokedex?.pokemon?.url}
+                  price={`${pokedex?.pokemon?.name.length * 25}`}/>
+                  </div>
+                  ))}
+           </div>
+        </div>
+
         </div>
       </div>
-    </div>
+    </>
   )
 }
