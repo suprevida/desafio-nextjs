@@ -22,7 +22,7 @@ export default function Home() {
         <div className="d-flex flex-row justify-content-between">
           <Cart />
             <div className="col-md-9">
-              <div className="row g-3">
+              <div className="row g-4">
                 {filter?.map(pokedex => (
                   <div className="col-4" key={pokedex?.pokemon?.name}>
                   <Card name={pokedex?.pokemon?.name}
