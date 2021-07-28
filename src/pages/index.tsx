@@ -71,7 +71,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
       },
     };
   } catch (error) {
-
     return {
       props: {
         pokemons: [],
