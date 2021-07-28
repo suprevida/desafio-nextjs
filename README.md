@@ -33,7 +33,7 @@ Com o croqui do projeto em mãos, um protótipo de UI foi feito considerando as 
 
 ## Como utilizar
 
-Com o node.js instalado, clone o projeto
-Instale as dependências `npm install` ou `yarn add`
-Caso aconteça algum erro, force a instalação de dependências `npm install -f`
-Rode o projeto `npm run dev` ou caso use yarn, `yarn dev`
+ - Com o node.js instalado, clone o projeto
+ - Instale as dependências `npm install` ou `yarn add`
+ - Caso aconteça algum erro, force a instalação de dependências `npm install -f`
+ - Rode o projeto `npm run dev` ou caso use yarn, `yarn dev`
