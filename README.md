@@ -1,42 +1,39 @@
-# Suprevida: Desafio NextJS
-Parabéns por ter passado de fase e chegado no teste :)
+# PokéSales - Loja com Next.js
+![Prototipo da pagina principal](https://i.imgur.com/q7GkgMV.png)
 
-Estamos empenhados em encontrar pessoas que façam parte do nosso time de tecnologia e acreditamos que você tem as características que buscamos.
-Para isso, elaboramos um desafio para você e como somos um ecommerce, nada melhor do que o tema ser exatamente esse.
+Pokésales foi um desafio proposto para contratação com o propósito de avaliar os conhecimentos técnicos necessários para o desenvolvimento de um e-commerce. Neste projeto foi proposto a utilização de Reactjs e Nextjs juntamente à duas API's para a renderização front-end.
 
-Insumos:
-https://pokeapi.co/api/v2/type/15/
-http://ip-api.com/json/?query=&fields=status,country,regionName,query
+## API's
 
-Instruções:
-- Faça um fork do projeto.
-- Mande um Pull Request com o que desenvolveu com seu nome completo no nome do PR.
+IP-LOCATION: http://ip-api.com/json/
+POKE-API: https://pokeapi.co/api/v2
 
-Queremos saber  como você montaria uma loja para um (1) tipo de Pokémon. Escolha o seu preferido.
+Revisando a situação das API's, não foi possível encontrar valores de custo para os itens da loja, e por, foi criada uma função utilizando a quantidade de letras do 'name' de cada item.
+Foi possível realizar algumas filtragens do conteúdo utilizando paths disponibilizados nas documentações.
 
-Os Pokémons deverão ser mostrado através da API listada acima. Após a requisição, os preços devem ser definidos mockados ou randomicamente(⭐).
+## Protótipo
+![Design components](https://i.imgur.com/OSLlNpk.png)
+![Protótipo do modal](https://i.imgur.com/tLlsfo4.png)
+Com o croqui do projeto em mãos, um protótipo de UI foi feito considerando as grids do framework-css previsto para a aplicação(Bootstrap). 
 
-Pensamos em funcionalidades que julgamos essenciais para essa loja.
+## Tecnologias utilizadas
+ - Figma
+ - Reactjs
+ - Nextjs
+ - Bootstrap 5.0.2
+ - Axios
 
-Catálogo de produtos;
+## Itens disponíveis na aplicação
 
-- Carrinho lateral
-- Resumo do carrinho
-- 1 loja com Pokémon de um único tipo
-- Barra de busca para filtrar os Pokémon
-- Botão de finalizar compra, reiniciando o processo de compra
-- Modal de obrigado ao finalizar compra
-- Geolocalização do cliente por IP
+ - Catálogo de produtos
+ - Carrinho de compras
+ - Barra de busca
+ - Modal de finalização de compra
+ - Geolocalização.
 
-![https://i.imgur.com/oMRy8Is.jpg](https://i.imgur.com/oMRy8Is.jpg)
+## Como utilizar
 
-E deixe sua imaginação fluir. Faça o quiser para nos impressionar e demonstrar seus conhecimentos. 
-Se te ajudar, deixamos algumas idéias pra você :)
-
-- Layout responsivo
-- Salvar dados locamente para não perder o carrinho no refresh da página
-- Deploy na Vercel por exemplo
-
-Estamos ansiosos pra ver o resultado. Boa sorte!
-
-
+Com o node.js instalado, clone o projeto
+Instale as dependências `npm install` ou `yarn add`
+Caso aconteça algum erro, force a instalação de dependências `npm install -f`
+Rode o projeto `npm run dev` ou caso use yarn, `yarn dev`
