@@ -23,23 +23,21 @@ const Card = ({name, imgUrl, price}: Settings) => {
   }, [])
 
   return (
-      <div className="row">
-        <div className="card" style={{ backgroundImage: `url(${bgImg})` }}>
+        <div className="card-boz" style={{ backgroundImage: `url(${bgImg})` }}>
           <div className="text">
-            <h3>{name}</h3>
-            <div className="rate">
-              <div className="text-uppercase pb-2">
-              {description}
+              <div className="top">
+                <h3>{name}</h3>
+                <span>{description}</span>
               </div>
-              <div className="text-uppercase pb-2">
-              R$ {price},00
-              </div>
-              <button type="button" className="btn btn-dark">Add to cart</button>
+              <div className="bottom">
+                <p className="bolder">R${price},00</p>
+                <div className="btn btn-dark">Add to cart</div>
               </div>
             </div>
           </div>
-        </div>
     )
 }
 
 export default Card;
+
+// {name} {description} 

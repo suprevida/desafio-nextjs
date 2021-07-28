@@ -1,0 +1,14 @@
+.bg-blue {
+  background-color: rgba($color: $primary, $alpha: 0.1);
+}
+
+.userImage {
+  border-radius: 8px;
+}
+
+.logo {
+  h3 {
+    text-transform: inherit;
+    margin: 0 8px;
+  }
+}
