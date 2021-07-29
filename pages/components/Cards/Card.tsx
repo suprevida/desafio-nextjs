@@ -24,7 +24,8 @@ const Card = ({name, imgUrl, price, addToCart}: Settings) => {
   }, [])
 
   //Click to add
-  function handleClick() {
+  function handleClick(e) {
+    e.preventDefault();
     const pokemon:any = {
         price: parseInt(price),
         name,

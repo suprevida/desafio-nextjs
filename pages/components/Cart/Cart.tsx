@@ -14,7 +14,7 @@ const [ items, setItems ] = useState<any>(null);
   useEffect(() => {
     const info: any = Object.values(cart).map((u) => u)
     setItems(info)
-  }, [items])
+  }, [])
 
   console.log(items)
 
@@ -26,9 +26,6 @@ const [ items, setItems ] = useState<any>(null);
             <h2>Cart</h2>
             <hr />
           </div>
-          {items?.map((u) => {return(
-            <div className="" key={u[0]?.name}></div>
-          )})}
           <div className="Buys d-flex justify-content-between align-items-center">
             <div className="btn remove h-100">-</div>
           </div>
