@@ -2,16 +2,14 @@
   background: $neutral-light;
   padding: 16px;
   width: 100%;
-  max-height: 800px;
+  min-height: 500px;
+  max-height: 900px;
   margin-right: 1.5rem;
 
-  .bottom {
-        position: absolute;
-    left: 5.62%;
-    right: 1.5%;
-    top: 79.95%;
-    bottom: 2.93%;
-  }
+  // .footer {
+  //   position: relative;
+  //   top: 73%;
+  // }
 
   .remove {
     background: $danger;

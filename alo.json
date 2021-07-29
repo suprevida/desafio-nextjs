@@ -1,0 +1,34 @@
+[
+  {
+      "pidgey": {
+          "price": 150,
+          "name": "pidgey",
+          "description": [
+              "normal",
+              "flying"
+          ],
+          "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/16.png",
+          "count": 1
+      },
+      "butterfree": {
+          "price": 250,
+          "name": "butterfree",
+          "description": [
+              "bug",
+              "flying"
+          ],
+          "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/12.png",
+          "count": 1
+      },
+      "charizard": {
+          "price": 225,
+          "name": "charizard",
+          "description": [
+              "fire",
+              "flying"
+          ],
+          "img": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png",
+          "count": 1
+      }
+  }
+]
