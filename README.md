@@ -2,6 +2,7 @@
 ![Prototipo da pagina principal](https://i.imgur.com/q7GkgMV.png)
 
 Pokésales foi um desafio proposto para contratação com o propósito de avaliar os conhecimentos técnicos necessários para o desenvolvimento de um e-commerce. Neste projeto foi proposto a utilização de Reactjs e Nextjs juntamente à duas API's para a renderização front-end.
+Se você quiser ver o projeto em Figma, [acesse o link](https://www.figma.com/file/DzOqQyiyHlAw0iHnWViAPs/Untitled?node-id=0%3A1)
 
 ## API's
 

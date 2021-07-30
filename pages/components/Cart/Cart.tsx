@@ -15,6 +15,11 @@ export const Cart = (cart) => {
   console.log('ITEMS', onData);
   // console.log(items)
 
+  const loadImg = ( {src} ) => {
+    
+
+  }
+
   
     return (
       <>
@@ -26,10 +31,11 @@ export const Cart = (cart) => {
           </div>
           <div className="Buys d-flex justify-content-between align-items-center flex-wrap">
 
-            {items.map((u) => (
+            {items.map((u) => 
+              (
               <>
               <div className="info d-flex align-items-center justify-content-between" key={u.name}>
-              <img src={u.img} alt={`Imagem de ${u.name}`} />
+              <Image src={u.img} alt={`Imagem de ${u.name}`} height={50} width={50}/>
                   <div className="text mx-2">
                   <p className="m-0">{u.name}</p>
                   <span>R$ {u.price},00</span>
