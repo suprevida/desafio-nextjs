@@ -10,14 +10,10 @@ type SetCart= {
 }
 
 export const Cart = (cart) => {
-const [ items, setItems ] = useState<any>(null);
-  useEffect(() => {
-    const info: any = Object.values(cart).map((u) => u)
-    setItems(info)
-  }, [])
-
+  console.log('ITEMS', cart)
+  const items = cart.cart
   console.log(items)
-
+  
     return (
       <>
       <div className="cart">
@@ -27,7 +23,22 @@ const [ items, setItems ] = useState<any>(null);
             <hr />
           </div>
           <div className="Buys d-flex justify-content-between align-items-center">
-            <div className="btn remove h-100">-</div>
+
+            {items.map((u) => (
+              <>
+              <div className="d-flex flex-wrap" key={u.name}>
+              <div className="info d-flex align-items-center">
+              <Image src={img} width={50} height={50} />
+                  <div className="text mx-2">
+                  <p className="m-0">{u.name}</p>
+                  <span>R$ {u.price},00</span>
+                  </div>
+                  <div className="btn remove h-100">-</div>
+              </div>
+              </div>
+              </>
+            ))}
+
           </div>
         </div>
         <hr />
@@ -50,10 +61,3 @@ export default Cart
 
 
 
-{/* <div className="info d-flex align-items-center">
-<Image src={img} width={50} height={50} />
-<div className="text mx-2">
- <p className="m-0">Nome</p>
- <span>R$ 150,00</span>
-</div>
-</div> */}

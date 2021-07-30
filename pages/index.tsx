@@ -16,7 +16,7 @@ type PokemonData= {
 
 export default function Home() {
   const { data , loading } =  PokeApi();
-  const [cart, setCart] = useState({});
+  const [cart, setCart] = useState([]);
   const filter = data?.pokemon;
 
 
@@ -33,7 +33,9 @@ const addToCart: any = (pokemon: PokemonData) => {
     }
     tempList[pokemon.name] = finalData
   }
-  setCart(tempList)
+
+  setCart(Object.values(tempList))
+  console.log('CART', cart)
 }
 
   
