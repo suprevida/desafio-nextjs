@@ -33,19 +33,17 @@ const addToCart: any = (pokemon: PokemonData) => {
     }
     tempList[pokemon.name] = finalData
   }
-
   setCart(Object.values(tempList))
-  console.log('CART', cart)
+  // console.log('CART', cart)
 }
 
-  
   return (
     <>
       <div className="container overflow-hidden">
         {loading && <h1>Loading...</h1>}
         <div className="my-5 text-uppercase text-bold olhaqui"/>
         <div className="d-flex flex-row justify-content-between">
-          <Cart cart={cart} />
+          <Cart cart={cart}/>
             <div className="col-md-9">
               <div className="row g-4">
                 {filter?.map(pokedex => (
