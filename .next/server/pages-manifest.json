@@ -1,7 +1,14 @@
 {
   "/_app": "pages/_app.js",
+  "/api/ipapi": "pages/api/ipapi.js",
+  "/api/pokeapi": "pages/api/pokeapi.js",
+  "/components/Cards/Card": "pages/components/Cards/Card.html",
+  "/components/Cart/Cart": "pages/components/Cart/Cart.html",
+  "/components/Modal/Modal": "pages/components/Modal/Modal.html",
+  "/components/Navbar/Navbar": "pages/components/Navbar/Navbar.html",
+  "/": "pages/index.html",
+  "/modal/[id]": "pages/modal/[id].html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js",
-  "/": "pages/index.js"
+  "/404": "pages/404.html"
 }

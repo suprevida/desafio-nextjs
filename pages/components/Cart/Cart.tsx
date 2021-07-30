@@ -10,8 +10,8 @@ type SetCart= {
 }
 
 export const Cart = (cart) => {
-  const items = cart.cart
-  const onData = cart.cart.map((x) => x.name);
+  const items = cart?.cart
+  const onData = cart?.cart?.map((x) => x.name);
   console.log('ITEMS', onData);
   // console.log(items)
 
@@ -31,7 +31,7 @@ export const Cart = (cart) => {
           </div>
           <div className="Buys d-flex justify-content-between align-items-center flex-wrap">
 
-            {items.map((u) => 
+            {items?.map((u) => 
               (
               <>
               <div className="info d-flex align-items-center justify-content-between" key={u.name}>
